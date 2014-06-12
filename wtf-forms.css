@@ -170,11 +170,9 @@
 
 /* Media query to target Firefox only */
 @-moz-document url-prefix() {
-  /* Firefox hack to hide the arrow */
-  .select select {
-    text-indent: 0.01px;
-    text-overflow: '';
-    padding-right: 1rem;
+  /* Removes custom arrow from Firefox */
+  .select:after {
+    content: none;
   }
 
   /* <option> elements inherit styles from <select>, so reset them. */
